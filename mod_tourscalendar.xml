@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" method="upgrade">
+	<name>Tours Calendar</name>
+	<creationDate>15.04.2016</creationDate>
+	<author>Ivan Rassokha</author>
+	<authorEmail>Ivan@rassokha.com</authorEmail>
+	<version>0.0.1</version>
+	<!-- Обратите внимание на тэг  files: в нем содержится информация, о том какие файлу нужно копировать в каталог модуля -->
+	<files>
+		<filename module="mod_tourscalendar">mod_tourscalendar.php</filename>
+		<filename>mod_tourscalendar.xml</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+		<filename>helper.php</filename>
+	</files>
+</extension>
