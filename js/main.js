@@ -78,15 +78,31 @@ jQuery(function($) {
                 $('li[itemdate='+dateText+']').show();
                 $('li[itemdate='+dateText+']').addClass('sli');
 
-                $('.slidewrap').carousel({
-                    slider: '.slider',
-                    slide: 'li.sli',
-                    nextSlide: '.next',
-                    prevSlide: '.prev',
-                    speed: 300 // ms.
+                //$('.slidewrap').carousel({
+                //    slider: '.slider',
+                //    slide: 'li.sli',
+                //    nextSlide: '.next',
+                //    prevSlide: '.prev',
+                //    speed: 300 // ms.
+                //});
+                var slidenum = $('.slider > li.sli').length;
+
+                $('.slider').css({
+                    marginLeft: "0px",
+                    width: 100 * slidenum + "%"
                 });
-                $('.next').removeClass('disabled');
-                $('.prev').addClass('disabled');
+                $('.sli').css({
+                    float: "left",
+                    width: (100 / slidenum) + "%"
+                });
+
+                if(slidenum>1) {
+                    $('.slidnav .arrow').show();
+                    $('.next').removeClass('disabled');
+                    $('.prev').addClass('disabled');
+                }
+                else
+                    $('.slidnav .arrow').hide();
 
                 //console.log(dateText);
                 //console.log(inst);

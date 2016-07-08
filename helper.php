@@ -48,10 +48,12 @@ class modToursCalendar
             $ititleru = $arrelements['4c0dd672-3ef0-4e14-b8f4-506352c67473'];
             $itext = $arrelements['3b99a9cf-ba7d-4e9c-9b4a-8adb2fa1777c'];
             $itextru = $arrelements['81d6debb-66c9-49f1-b071-d68d28779ff3'];
+            $iimg = $arrelements['c26feca6-b2d4-47eb-a74d-b067aaae5b90'];
             foreach($idate as $idat) {
                 $rez[$i0]['date'] = substr($idat['value'], 0, 10);
                 $rez[$i0]['title'] = ($lang=="ru")? $ititleru[0]['value'] : $ititle[0]['value'];
                 $rez[$i0]['text'] = ($lang=="ru")? $itextru[0]['value'] :$itext[0]['value'];
+                $rez[$i0]['img'] = $iimg['file'];
                 $rez[$i0]['alias']= $q['alias'];
                 $i0++;
             }

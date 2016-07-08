@@ -20,6 +20,7 @@ defined('_JEXEC') or die;
                         <li itemdate="<?= $item['date'] ?>" hidden>
                             <h4><?= $item['title'] ?></h4>
                             <p><?= $item['text'] ?></p>
+                            <img src="<?= $item['img'] ?>">
                             <a class="more" href="<?= JURI::base(). 'tours/new-tour/item/' . $item['alias'] ?>"><?php echo JText::_('MOD_TOURISCALENDAR_TEXT1'); ?></a>
                         </li>
                     <?php endforeach ?>
